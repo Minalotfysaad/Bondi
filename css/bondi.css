@@ -1,0 +1,205 @@
+:root{
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+/* Start Global Components */
+.main-btn{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    padding: 0.5rem 1rem;
+}
+.main-title::after{
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* End Global Components */
+body{
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+/* Start Navbar */
+.navbar{
+    background-color: var(--dark-color);
+}
+.navbar .navbar-nav .nav-link{
+    color: white;
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus{
+    color: var(--green-color);
+}
+.navbar .search{
+    border-left: 1px solid var(--green-color);
+}
+.navbar .search svg{
+    color: var(--green-color); 
+}
+.navbar .navbar-toggler{
+    color: white;
+    font-size: 25px;
+    border-color: white;
+}
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"]{
+    color: var(--green-color);
+}
+/* End Navbar */
+/* Start Landing */
+.landing{
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 72px);
+}
+/* End Landing */
+/* Start Features */
+.features .icon-holder{
+height: 200px;
+}
+.features .icon-holder svg{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.features .icon-holder .number{
+    font-size: 12rem;
+    color: var(--section-color);
+}
+.features .icon-holder .icon{
+    color: var(--green-color);
+}
+.features .feat h4{
+    color: var(--yellow-color);
+}
+/* End Features */
+/* Start Portfolio */
+.portfolio{
+    background-color: var(--section-color);
+}
+.portfolio ul li{
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.portfolio ul .active{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+.portfolio ul li:not(.active):hover{
+    color: var(--red-color);
+}
+.portfolio .box{
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.portfolio .box::before{
+    content: attr(data-work);
+    position: absolute;
+    background-color: rgba(51, 209, 204, 0.9);
+    color: white;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    transform: translateX(calc(-100% - 5px));
+}
+.portfolio .box:hover::before{
+    transform: translateX(0);
+}
+/* End Portfolio */
+/* Start About */
+.about .description{
+    max-width: 500px;
+}
+/* End About */
+/* Start Contact */
+.contact{
+    background-color: var(--section-color);
+}
+.contact .sec-title h2{
+    color: var(--yellow-color);
+}
+.contact .box{
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.contact .box:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+.contact .box h4{
+    background-color: var(--green-color);
+    transition: 0.3s;
+}
+.contact .box:hover h4{
+    background-color: var(--red-color);
+    color: var(--yellow-color) !important;
+}
+/* End Contact */
+/* Start Project */
+.project{
+    background-color: var(--dark-color);
+}
+/* End Project */
+/* Start Blogs */
+.blog .card:hover{
+    cursor: pointer;
+}
+/* End Blogs */
+/* Start Subscribe */
+.subscribe{
+    background-color: var(--yellow-color);
+}
+.subscribe input[type="text"]{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    transition: 0.3s;
+    color: #ff3150!important;
+}
+.subscribe input[type="text"]:focus{
+    border-bottom: 1px solid var(--red-color);
+}
+.subscribe input[type="text"]::placeholder{
+    color: rgba(255, 255, 255, 0.6);
+}
+.subscribe input[type="submit"]{
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+}
+/* End Subscribe */
+/* Start Footer */
+.footer{
+    background-color: var(--dark-color);
+}
+.footer .info span:first-of-type{
+    color: var(--green-color);
+}
+.footer .info span:last-of-type{
+    color: var(--yellow-color);
+}
+.footer .contact-us ul li{
+    cursor: pointer;
+    transition: 0.3s;
+}
+.footer .contact-us ul li:hover{
+    color: var(--green-color);
+}
+/* End Footer */
